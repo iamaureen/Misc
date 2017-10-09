@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Title Passed: <%= title %></title>
+  </head>
+  <body bgcolor=skyblue>
+
+    hello all how are you
+
+    <!-- Single Variable -->
+    <p> <%= hello %> </p>
+
+    <!-- List, use loop -->
+    <h4>List of items shown from array</h4>
+    <ul>
+      <% friendsName.forEach(function(friends){ %>
+        <li> <%=friends.name %> - <%= friends.drunkness %> </li>
+    <%   }); %>
+    </ul>
+
+    <!-- links of elements from array -->
+    <h4>Items shown from array</h4>
+    <% for(var i=0; i<items.length;i++) { %>
+      <li> <%= items[i]%></li>
+   <%  }%>
+
+   <br> <a href=/link> Click Here </a>
+  </body>
+</html>

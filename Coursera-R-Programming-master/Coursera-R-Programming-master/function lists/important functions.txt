@@ -1,0 +1,43 @@
+Whenever you're working with a new dataset, the first thing you should do is
+look at it! What is the format of the data? What are the dimensions? What are
+the variable names? How are the variables stored? Are there missing data? Are
+there any flaws in the data?
+
+class(x)
+-class describes the typep of x: matrix, dataframe, list or vector etc
+
+dim(x)
+-dimension of x; how many rows and colmns
+
+nrow(x)/ncol(x)
+-number of rows/colmns in x
+
+object.size(x)
+-how much space dataset x is occupying in memory
+
+names(x)
+-returns a character vector of colm(i.e.variable name) names
+
+head(x)
+-returns the first 6 rows of dataset x by default
+
+head(x, nrow)
+-returns the nrow of dataset x
+
+tail(x)/tail(x, nrow)
+-returns data from the last
+
+summary(x)
+-provides different output for each variable, depending on its class
+
+table(x$col_name)
+-how many times each value of 'col_name' occurs in the data
+
+str(x)
+-gives the detailed structure of x
+
+A %in% B
+checks if A is in B; A- value to be checked, B-value to be checked against
+example- 1:10 %in% c(1,3,5,9)
+output- TRUE FALSE  TRUE FALSE  TRUE FALSE FALSE FALSE  TRUE FALSE
+

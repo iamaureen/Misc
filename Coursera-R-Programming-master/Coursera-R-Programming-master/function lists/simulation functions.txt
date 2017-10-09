@@ -1,0 +1,41 @@
+Simulation
+----------
+sample(1:6, 4, replace=TRUE)
+-generate random numbers
+-this example generates 4 numbers from 1-6, where replacement=true
+sample(1:20,10)
+-this example generates 10 numbers from 1-20, without replacement. so no number appears twice
+
+** we want to simulate 100 flips of an unfair two-sided coin. This
+ particular coin has a 0.3 probability of landing 'tails' and a 0.7
+ probability of landing 'heads'
+
+flips <- sample(c(0,1), 100, replace = TRUE, prob = c(0.3, 0.7))
+
+sum(flips)
+-returns total number of ones in flips
+
+Each probability distribution in R has an r*** function (for "random"), a
+d*** function (for "density"), a p*** (for "probability"), and q*** (for
+"quantile").
+
+rbinom(1, size = 100, prob = 0.7)
+-generates total number of heads in 100 flips
+
+
+flips2<-rbinom(100, size = 1, prob = 0.7)
+-if we want to see all of the 0s and 1s, we can request 100
+observations, each of size 1, with success probability of 0.7.
+
+rnorm(10)
+-generate 10 random numbers from a std normal distribution (mean=0,sd=1)
+
+rnorm(10,100,25)
+generate 10 random numbers from a std normal distribution (mean=100,sd=25)
+
+What if we want to simulate 100 *groups* of random numbers, each
+containing 5 values generated from a Poisson distribution with mean 10?
+-rpois(5,10): generate 5 random values from a Poisson dis with mean=10
+-my_pois<-replicate(100, rpois(5,10)): perform this 100 times, and store in my_pois
+-cm<-colMeans(my_pois):  mean of each column in my_pois
+-hist(cm): generates the plot 

@@ -1,0 +1,20 @@
+Reference: http://swirlstats.com/students.html
+
+1. install R (https://www.r-project.org/) and also rstudio (https://www.rstudio.com/products/rstudio/)
+
+2. go to R console and write
+install.packages('swirl')
+check the version of swirl : packageVersion('swirl')
+
+3. every time, before using swirl, we have to load the package
+from R console -->
+library('swirl')
+
+4.swirl offers a variety of interactive courses, but for our purposes, we want the one 
+called R Programming. Type the following from the R prompt to install this course:
+install_from_swirl("R Programming")
+
+5.Type the following from the R console to start swirl:
+swirl()
+
+and complete the lessons 

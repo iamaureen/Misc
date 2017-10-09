@@ -1,0 +1,19 @@
+data(cars) - load data
+
+plot(cars) - plots the variable of cars(here it has two variables)
+
+plot(x = cars$speed, y = cars$dist) - doesnt have x,y labels
+
+plot(x = cars$speed, y = cars$dist, xlab = "Speed", ylab="Stopping Distance") - same, but with labels now
+
+plot(cars, main="My Plot") - adds title to the graph
+
+plot(cars, col=2) - plotted points are colored red
+
+plot(cars, xlim=c(10,15)) - Plot cars while limiting the x-axis to 10 through 15.
+
+plot(cars, pch=2) - the plotting shapes are triangles 
+
+**boxplot
+
+http://www.ling.upenn.edu/~joseff/rstudy/week4.html
