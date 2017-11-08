@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="bigOne"></h1>
+
+
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBWS-3X45UWOFlKKStsSQViB0xnfQneaXk",
+    authDomain: "pushsample-4ea14.firebaseapp.com",
+    databaseURL: "https://pushsample-4ea14.firebaseio.com",
+    projectId: "pushsample-4ea14",
+    storageBucket: "pushsample-4ea14.appspot.com",
+    messagingSenderId: "594312442368"
+  };
+  firebase.initializeApp(config);
+
+  //update h1 with real time database change
+  var bigOne = document.getElementById('bigOne');
+  var dbRef = firebase.database().ref().child('text');
+  dbRef.on('value', snap => bigOne.innerText = snap.val())
+
+</script>
+
+</body>
+</html>
