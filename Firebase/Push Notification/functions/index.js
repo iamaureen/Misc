@@ -2,6 +2,17 @@ const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 admin.initializeApp(functions.config().firebase);
 
+//get the database value - start
+var ref = firebase.app().database().ref();
+
+ref.once(‘value’)
+ .then(function (snap) {
+ console.log(‘snap.val()’, snap.val());
+ });
+
+//get the database value - end
+
+//function to send notifications
 exports.sendNotifications = functions.database.ref('/notifications/{notificationId}').onWrite((event) => {
 
   // Exit if data already created
