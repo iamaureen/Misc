@@ -206,13 +206,13 @@ function registerCallback(regId) {
 
 
 firebase.database().ref('/data').once('value', function(snapshot) {
- document.getElementById("status").innerHTML = "fuck1";
+ document.getElementById("status").innerHTML = "success1";
  console.log(snapshot.val());
    // document.getElementById("status").innerHTML=snapshot;
 });
 
 chrome.gcm.onMessage.addListener(function(message) {
-  document.getElementById("status").innerHTML = "fuck";
+  document.getElementById("status").innerHTML = "success";
  // document.getElementById("status").innerHTML=message.key() + " " + message.val();
 });
 }
@@ -247,6 +247,12 @@ function onPageDetailsReceived(pageDetails)  {
 window.onload = function() {
     document.getElementById('subscribe-button').addEventListener('click', startSubscribe);
     document.getElementById('addbookmark-button').addEventListener('click', addBookmark);
-     getURL();
+    document.getElementById('chatbotbtn').addEventListener('click', changePage);
+    getURL();
   initApp();
 };
+
+function changePage(){
+  console.log("Button clicked")
+  window.location.href="chatbot.html";
+}

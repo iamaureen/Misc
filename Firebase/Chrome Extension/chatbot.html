@@ -28,56 +28,33 @@ limitations under the License.
        *************************************************************************************** -->
 
   <!-- Firebase JS -->
+  <!--
+  https://channel9.msdn.com/Events/Build/2017/P4074
+  https://qnamaker.ai/Home/MyServices  - signed in with asu id
+  https://qnamaker.ai/Edit/KnowledgeBase?kbId=a341008b-98d2-4ba2-b17d-152289a52bb0
+  -->
 
 </head>
 <body>
-  <button type="button" class="close" aria-label="Close" id ="closePopUp">
-  <span aria-hidden="true">&times;</span>
-</button>
-  <h3>Firebase Authentication</h3>
 
-  <div class="quickstart-user-details-container">
-    <button id="quickstart-button">Sign-in with Google</button>
-    <button id="subscribe-button">Subscribe</button>
-  </div>
-  <br/>
-      <div id="status" style="background-color:#e5e5e5;padding:5px">
-</div>
-<br/>
-    <p>
-      Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
-      <div>Firebase auth <code>currentUser</code> object value:</div>
-      <pre><code id="quickstart-account-details">null</code></pre>
-    </p>
-  </div>
-  <div class = "container">
- <br>
-  Title:
-  <input type="text" class="form-control" id="title" placeholder="Add the paper's title"></input>
-<br>
- <div id="bookmark">
-  Source:
-  <input type="text" class="form-control" id="url">
-  </div>
-  <br>
-  Notes:
-   <textarea class="form-control" rows="5" id="notes" placeholder="Add notes"></textarea><br>
- <!--
-  Tags:
-  <input id="ms" class="form-control" name="keywords[]"/>
- <br>
- //-->
-  <button id="addbookmark-button" class="btn btn-success btn-block">Add Reference</button>
-  <button id="chatbotbtn">Click me</button>
-</div>
-<br>
+    <button id="addbookmark-button" class="btn btn-success btn-block">Add Reference</button><br>
 
- </div>
+    <label> Chat:     </label>
+    <textarea id="chatbox" rows="4" cols="50" style="margin: 0px; width: 440px; height: 245px;"> </textarea></br>
+
+    <label> User Input:  </label>
+    <input id="input" type="text" name="input" maxlength="200"></br>
+
+    <button id="inputbtn">Click me</button>
+
+
+
 
    <script src="lib/jquery/jquery-1.11.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
-  <script src="credentials.js"></script>
+
+  <script src="chatbot.js"></script>
 </body>
 </html>
