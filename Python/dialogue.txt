@@ -1,0 +1,4 @@
+human,cozmo
+I do not know how to do it,I will help you
+Thank you cozmo,Welcome friend
+I think I should do it,Please go to the next step
